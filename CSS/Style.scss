@@ -47,28 +47,37 @@ table {
 /* fin reset css */
 
 /* Variables */
-/* colors */
 
-$pied : #353535;
+/* colors */
+$color0 :white; /* header */
+$color1 : #9356DC; /*  */
+$color2 : #FF79DA; /*  */
+$color3 : #99E2D0; /*  */
+$color4 : #353535; /*pied de page*/
+$color5 :#eaeaea; /*fond localisation*/
+$color6 :#f6f6f6; /*fond wrapper*/
+$color7 : #bababa; /*icons gris*/
+
+
+/* Fonts */
+$logo :shrikhandregular; /* font squirrel */
+$text :Roboto; /* google fonts */
+
 
 /*  */
-
-
-
-
+html{
+    font-family: $text;
+}
 
 #main_wrapper {
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: white;
-    font-family:robotoregular;
 }
 header {
-    width: 100%;
     flex: 6;
-    min-height: 180px;
+    min-height: 120px;
     align-items: center;
     justify-content: center;
     display: flex;
@@ -76,41 +85,72 @@ header {
 
     h1 {
         color:black;
-        font-size: 3em;
-        width: fit-content;
-        font-family: shrikhandregular;
+        font-family: $logo;
+        background-color: $color0;
+        font-size: 3rem;
     }
 }
-.wrapper
-{
-    width: 100%;
+
+.wrapper{
     flex: 6;
-    background-color: whitesmoke;
+    background-color: $color6;
     align-items: center;
     justify-content: center;
     display: flex;
-    flex-direction: column;  
-}
+    flex-direction: column; 
 
-.wrapper__restaurants
-{
-    article
-    {
+    &__intro{
+        width: 100%;
+        text-align: center;
+        display: flex;
+        flex-direction: column; 
+        align-items: center;
+        justify-content: center;
+        &__p1{
+            font-size: 0.9rem;
+            font-weight: 600;
+            background-color: $color5;
+            padding-top: 10px;
+            padding-bottom: 10px;
+
+        }
+
+        &__p2{
+            color: brown;
+        }
+        &__p3{
+            color: yellow;
+        }
+    } 
+
+    &__hiw{
+        color:blue;
+    }
+
+    &__restaurants{
+    article{
         margin: 20px;
-        img
-        {
+        img{
             width: 100%;
         }
     }
 }
-
+}
+    
 footer{
     width: 100%;
     flex: 3;
     min-height: 360px;
-    background-color: $pied;
+    background-color: $color4;
     align-items: center;
     justify-content: center;
     display: flex;
     flex-direction: column;    
 }
+
+.btn--violet {
+    background-color: #9356DC;
+    width: 60%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }

@@ -53,7 +53,22 @@ table {
 /* fin reset css */
 /* Variables */
 /* colors */
+/* header */
 /*  */
+/*  */
+/*  */
+/*pied de page*/
+/*fond localisation*/
+/*fond wrapper*/
+/*icons gris*/
+/* Fonts */
+/* font squirrel */
+/* google fonts */
+/*  */
+html {
+  font-family: Roboto;
+}
+
 #main_wrapper {
   width: 100%;
   display: -webkit-box;
@@ -66,16 +81,13 @@ table {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background-color: white;
-  font-family: robotoregular;
 }
 
 header {
-  width: 100%;
   -webkit-box-flex: 6;
       -ms-flex: 6;
           flex: 6;
-  min-height: 180px;
+  min-height: 120px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -93,19 +105,16 @@ header {
 
 header h1 {
   color: black;
-  font-size: 3em;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
   font-family: shrikhandregular;
+  background-color: white;
+  font-size: 3rem;
 }
 
 .wrapper {
-  width: 100%;
   -webkit-box-flex: 6;
       -ms-flex: 6;
           flex: 6;
-  background-color: whitesmoke;
+  background-color: #f6f6f6;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -119,6 +128,44 @@ header h1 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+.wrapper__intro {
+  width: 100%;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.wrapper__intro__p1 {
+  font-size: 0.9rem;
+  font-weight: 600;
+  background-color: #eaeaea;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.wrapper__intro__p2 {
+  color: brown;
+}
+
+.wrapper__intro__p3 {
+  color: yellow;
+}
+
+.wrapper__hiw {
+  color: blue;
 }
 
 .wrapper__restaurants article {
@@ -149,5 +196,12 @@ footer {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+.btn--violet {
+  background-color: #9356DC;
+  width: 60%;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 /*# sourceMappingURL=Style.css.map */
