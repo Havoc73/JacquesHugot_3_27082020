@@ -58,15 +58,36 @@ $color5 :#eaeaea; /*fond localisation*/
 $color6 :#f6f6f6; /*fond wrapper*/
 $color7 : #bababa; /*icons gris*/
 
-
 /* Fonts */
 $logo :shrikhandregular; /* font squirrel */
 $text :Roboto; /* google fonts */
 
 
+/* mixins */
+
+@mixin btn--violet {
+    background: linear-gradient($color2,$color1);
+    color:white;
+    width: 20%;
+    height: 16px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 18px 18px 18px 18px;
+  }
+
+@mixin margins {
+    margin-bottom: 20px;
+    margin-top:20px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+
 /*  */
+
 html{
     font-family: $text;
+    width: 100%;
 }
 
 #main_wrapper {
@@ -76,7 +97,7 @@ html{
     justify-content: center;
 }
 header {
-    flex: 6;
+    width: 100%;
     min-height: 120px;
     align-items: center;
     justify-content: center;
@@ -84,15 +105,17 @@ header {
     flex-direction: column;
 
     h1 {
+        width: 100%;
         color:black;
         font-family: $logo;
         background-color: $color0;
+        text-align  : center;
         font-size: 3rem;
     }
 }
 
 .wrapper{
-    flex: 6;
+    width: 100%;
     background-color: $color6;
     align-items: center;
     justify-content: center;
@@ -107,29 +130,38 @@ header {
         align-items: center;
         justify-content: center;
         &__p1{
+            width: 100%;
             font-size: 0.9rem;
-            font-weight: 600;
+            font-weight: 599;
             background-color: $color5;
             padding-top: 10px;
             padding-bottom: 10px;
-
+            
+            i {
+                margin-right: 10px;
+            };
         }
 
         &__p2{
-            color: brown;
+            width: 100%;
         }
         &__p3{
-            color: yellow;
+            width: 100%;
         }
+        &__p4{
+            width: 100%;
+            @include btn--violet()
     } 
 
     &__hiw{
+        width: 100%;
         color:blue;
     }
 
     &__restaurants{
+        width: 100%;
     article{
-        margin: 20px;
+        width: 100%;
         img{
             width: 100%;
         }
@@ -139,18 +171,19 @@ header {
     
 footer{
     width: 100%;
-    flex: 3;
     min-height: 360px;
     background-color: $color4;
-    align-items: center;
-    justify-content: center;
+    color: white;
+    align-items: start;
+    justify-content:start;
     display: flex;
     flex-direction: column;    
+    h1 {
+        @include margins()
+        font-family: $logo;
+    }
+    h2 {
+        @include margins()
+    }
 }
-
-.btn--violet {
-    background-color: #9356DC;
-    width: 60%;
-    padding-top: 10px;
-    padding-bottom: 10px;
-  }
+}
