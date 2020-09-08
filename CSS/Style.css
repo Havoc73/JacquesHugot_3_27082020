@@ -122,6 +122,7 @@ header h1 {
 }
 
 .wrapper {
+  width: 100%;
   background-color: #f6f6f6;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -139,6 +140,7 @@ header h1 {
 }
 
 .wrapper__intro {
+  width: 100%;
   text-align: center;
   display: -webkit-box;
   display: -ms-flexbox;

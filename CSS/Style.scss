@@ -169,6 +169,7 @@ header {
 }
 
 .wrapper{
+    width: 100%;
     background-color: $color6;
     align-items: center;
     justify-content: center;
@@ -176,6 +177,7 @@ header {
     flex-direction: column; 
 
     &__intro{
+        width: 100%;
         text-align: center;
         display: flex;
         flex-direction: column; 
