@@ -19,6 +19,14 @@ time, mark, audio, video {
   font: inherit;
   vertical-align: baseline;
   background: inherit;
+  -webkit-margin-before: 0;
+          margin-block-start: 0;
+  -webkit-margin-after: 0;
+          margin-block-end: 0;
+  -webkit-margin-start: 0;
+          margin-inline-start: 0;
+  -webkit-margin-end: 0;
+          margin-inline-end: 0;
 }
 
 /* HTML5 display-role reset for older browsers */
@@ -86,7 +94,6 @@ html {
 }
 
 header {
-  min-height: 120px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -103,7 +110,11 @@ header {
 }
 
 header h1 {
-  width: 100%;
+  width: 90%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 5%;
+  margin-right: 5%;
   color: black;
   font-family: shrikhandregular;
   background-color: white;
@@ -142,14 +153,18 @@ header h1 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  padding-bottom: 20px;
 }
 
 .wrapper__intro__p1 {
-  font-size: 0.9rem;
-  font-weight: 599;
   background-color: #eaeaea;
+  color: black;
+  height: 16px;
+  width: 100%;
   padding-top: 10px;
   padding-bottom: 10px;
+  font-size: 0.9rem;
+  font-weight: 599;
 }
 
 .wrapper__intro__p1 i {
@@ -157,15 +172,30 @@ header h1 {
 }
 
 .wrapper__intro__p2 {
-  margin-top: 30px;
-  margin-bottom: 30px;
+  padding-top: 20px;
+  width: 90%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 5%;
+  margin-right: 5%;
   font-weight: 700;
   font-size: 1.2rem;
 }
 
-.wrapper__intro__p4 {
+.wrapper__intro__p3 {
+  width: 90%;
   margin-top: 20px;
   margin-bottom: 20px;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.wrapper__intro__p4 {
+  width: 90%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 5%;
+  margin-right: 5%;
   background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
   background: linear-gradient(#FF79DA, #9356DC);
   color: white;
@@ -179,30 +209,40 @@ header h1 {
 }
 
 .wrapper__hiw {
+  text-align: left;
+  padding-top: 10px;
+  padding-bottom: 30px;
   width: 100%;
   background-color: white;
 }
 
-.wrapper__hiw h1 {
-  margin-top: 30px;
-  margin-bottom: 30px;
+.wrapper__hiw > h1 {
+  width: 90%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 5%;
+  margin-right: 5%;
   font-weight: 700;
   font-size: 1.2rem;
 }
 
 .wrapper__hiw ol {
-  width: 100%;
-  list-style-type: decimal;
-  list-style-position: inside;
+  margin-left: 5%;
+  width: 95%;
   text-align: left;
 }
 
-.wrapper__hiw li {
-  width: 100%;
+.wrapper__hiw ol i {
+  margin-right: 15px;
+  margin-left: 20px;
+}
+
+.wrapper__hiw ol li {
+  width: 90%;
   margin-top: 10px;
   margin-bottom: 10px;
-  margin-right: 15px;
-  margin-left: 25px;
+  margin-left: 5%;
+  margin-right: 5%;
   background-color: #f6f6f6;
   color: black;
   height: 16px;
@@ -213,11 +253,12 @@ header h1 {
           box-shadow: 0px 4px 4px #eaeaea;
 }
 
-.wrapper__hiw li i {
+.wrapper__hiw ol li i {
   color: #bababa;
 }
 
 .wrapper__restaurants {
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -226,15 +267,20 @@ header h1 {
       -ms-flex-direction: column;
           flex-direction: column;
   text-align: left;
-  margin-top: 50px;
 }
 
-.wrapper__restaurants__photo img {
+.wrapper__restaurants article {
   width: 90%;
   margin-top: 10px;
   margin-bottom: 10px;
   margin-left: 5%;
   margin-right: 5%;
+  background-color: white;
+}
+
+.wrapper__restaurants__photo img {
+  width: 100%;
+  border-radius: 20px 20px 0px 0px;
 }
 
 .wrapper__restaurants__text {
@@ -247,42 +293,40 @@ header h1 {
           flex-direction: row;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-line-pack: center;
+      align-content: center;
 }
 
-.wrapper__restaurants h1 {
+.wrapper__restaurants__text__left {
+  width: 50%;
+}
+
+.wrapper__restaurants__text__right {
+  border-radius: 0px 0px 20px 20px;
+  width: 50%;
+  margin: auto;
+  text-align: right;
+}
+
+.wrapper__restaurants > h1 {
+  width: 90%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 5%;
+  margin-right: 5%;
   font-weight: 700;
   font-size: 1.2rem;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  margin-left: 5%;
-  margin-right: 5%;
-}
-
-.wrapper__restaurants article h1 {
-  text-align: left;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  margin-left: 5%;
-  margin-right: 5%;
-}
-
-.wrapper__restaurants article h2 {
-  text-align: left;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  margin-left: 5%;
-  margin-right: 5%;
-  width: 45%;
 }
 
 .wrapper__restaurants__heart {
-  width: 45%;
-  background-color: #9356DC;
   text-align: right;
 }
 
 footer {
-  min-height: 360px;
+  width: 100%;
   background-color: #353535;
   color: white;
   -webkit-box-align: start;
@@ -298,19 +342,22 @@ footer {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  text-align: left;
 }
 
-footer h1 {
-  margin-top: 10px;
-  margin-bottom: 10px;
+footer > h1 {
+  width: 90%;
+  margin-top: 5px;
+  margin-bottom: 5px;
   margin-left: 5%;
   margin-right: 5%;
   font-family: shrikhandregular;
 }
 
-footer h2 {
-  margin-top: 10px;
-  margin-bottom: 10px;
+footer > h2 {
+  width: 90%;
+  margin-top: 5px;
+  margin-bottom: 5px;
   margin-left: 5%;
   margin-right: 5%;
 }
