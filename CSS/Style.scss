@@ -101,43 +101,13 @@ $text :Roboto; /* google fonts */
     font-weight: 599;
 }
 
-  @mixin margins0 {
-    width: 90%;
-    margin-top: 0px;
-    margin-bottom: 0px;
-    margin-left: 5%;
-    margin-right: 5%;
+  @mixin margins ($height: 0px ,$width: 5%, $main-width:90%) {
+    width: $main-width;
+    margin-top: $height;
+    margin-bottom: $height;
+    margin-left:$width;
+    margin-right:$width;
   }
-
-@mixin margins1 {
-    width: 90%;
-    margin-top: 5px;
-    margin-bottom: 5px;
-    margin-left: 5%;
-    margin-right: 5%;
-}
-@mixin margins2 {
-    width: 90%;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    margin-left: 5%;
-    margin-right: 5%;
-}
-@mixin margins3 {
-    width: 90%;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    margin-left: 5%;
-    margin-right: 5%;
-}
-@mixin margins4 {
-    width: 90%;
-    margin-top: 30px;
-    margin-bottom: 30px;
-    margin-left: 5%;
-    margin-right: 5%;
-}
-
 
 
 /*  */
@@ -160,7 +130,7 @@ header {
     flex-direction: column;
 
     h1 {
-        @include margins2;
+        @include margins(10px);
         color:black;
         font-family: $logo;
         background-color: $color0;
@@ -193,16 +163,16 @@ header {
 
         &__p2{
             padding-top: 20px;
-            @include margins3;
+            @include margins(20px);
             font-weight: 700;
             font-size: 1.2rem;
 
         }
         &__p3{
-            @include margins3;
+            @include margins(20px);
         }
         &__p4{
-            @include margins3;
+            @include margins(20px);
             @include btn--violet;
     }
 }
@@ -214,7 +184,7 @@ header {
         width: 100%;
         background-color: white;
         >h1{
-            @include margins3;
+            @include margins(20px);
             font-weight: 700;
             font-size: 1.2rem;
         }
@@ -227,7 +197,7 @@ header {
                 margin-left: 20px;
             }
         li{
-            @include margins2;
+            @include margins(10px);
             @include btn--gris;
             i {
                 color: $color7;
@@ -243,33 +213,35 @@ header {
         flex-direction: column;
         text-align  : left;
         article{
-            @include margins2;
-            background-color: $color0;
+            @include margins(10px);
+            background-color: #f6f6f6;
         } 
-        &__photo{      
-            img{
-                width: 100%;
-                border-radius:20px 20px 0px 0px;
-            }
+        &__photo{  
+            border-radius:15px 15px 0px 0px;
+            width: 100%;
         }
         &__text{
+            background-color: white;
             display: flex;
             flex-direction: row;
             flex-wrap: wrap;
             justify-content: space-between;
             align-content: center;
+            border-radius:0px 0px 15px 15px; 
             &__left{
-                width: 50%;
+                width: 65%;
+                margin-left: 5%;
             }
             &__right{
-                border-radius:0px 0px 20px 20px;
-                width: 50%;
-                margin: auto;
+                margin-top: auto;
+                margin-bottom:auto;
+                width: 25%;
                 text-align: right;
+                margin-right: 5%;
             }
         }
     >h1{
-        @include margins2;
+        @include margins(10px);
         font-weight: 700;
         font-size: 1.2rem;
     }
@@ -291,10 +263,10 @@ footer{
     flex-direction: column; 
     text-align: left;   
     >h1 {
-        @include margins1;
+        @include margins (5px);
         font-family: $logo;
     }
     >h2 {
-        @include margins1;
+        @include margins(5px);
     }
 }
