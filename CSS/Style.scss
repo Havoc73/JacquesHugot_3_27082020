@@ -14,15 +14,12 @@ menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
 	margin: 0;
 	padding: 0;
-	border: 0;
+    border: 0;
+    text-decoration: none;
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
     background: inherit;
-    margin-block-start: 0;
-    margin-block-end: 0;
-    margin-inline-start:0;
-    margin-inline-end:0;
 }
 
 a {
@@ -190,7 +187,7 @@ header {
         padding-bottom: 30px;
         width: 100%;
         background-color: white;
-        >h1{
+        >2{
             @include margins(20px);
             font-weight: 700;
             font-size: 1.2rem;
@@ -253,11 +250,11 @@ header {
                 margin-right: 5%;
             }
         }
-        >h1{
-            @include margins(10px);
-            font-weight: 700;
-            font-size: 1.2rem;
-        }        
+    >h2{
+        @include margins(10px);
+        font-weight: 700;
+        font-size: 1.2rem;
+    }
     &__heart{
         text-align  : right;
     }
@@ -275,7 +272,7 @@ footer{
     display: flex;
     flex-direction: column; 
     text-align: left;   
-    >h1 {
+    >h3 {
         @include margins (5px);
         font-family: $logo;
     }
