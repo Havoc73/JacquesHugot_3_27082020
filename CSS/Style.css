@@ -15,18 +15,11 @@ time, mark, audio, video {
   margin: 0;
   padding: 0;
   border: 0;
+  text-decoration: none;
   font-size: 100%;
   font: inherit;
   vertical-align: baseline;
   background: inherit;
-  -webkit-margin-before: 0;
-          margin-block-start: 0;
-  -webkit-margin-after: 0;
-          margin-block-end: 0;
-  -webkit-margin-start: 0;
-          margin-inline-start: 0;
-  -webkit-margin-end: 0;
-          margin-inline-end: 0;
 }
 
 /* HTML5 display-role reset for older browsers */
@@ -218,7 +211,7 @@ header h1 {
   background-color: white;
 }
 
-.wrapper__hiw > h1 {
+.wrapper__hiw > 2 {
   width: 90%;
   margin-top: 20px;
   margin-bottom: 20px;
@@ -317,7 +310,7 @@ header h1 {
   margin-right: 5%;
 }
 
-.wrapper__restaurants > h1 {
+.wrapper__restaurants > h2 {
   width: 90%;
   margin-top: 10px;
   margin-bottom: 10px;
@@ -351,7 +344,7 @@ footer {
   text-align: left;
 }
 
-footer > h1 {
+footer > h3 {
   width: 90%;
   margin-top: 5px;
   margin-bottom: 5px;
