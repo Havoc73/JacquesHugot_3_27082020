@@ -24,6 +24,12 @@ time, mark, audio, video {
     margin-inline-start:0;
     margin-inline-end:0;
 }
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
 /* HTML5 display-role reset for older browsers */
 
 article, aside, details, figcaption, figure, 
@@ -48,6 +54,7 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+
 /* fin reset css */
 
 /* Variables */
@@ -231,6 +238,12 @@ header {
             &__left{
                 width: 65%;
                 margin-left: 5%;
+                h1{
+                    font-weight: 700;
+                    font-size: 1.2rem;
+                    
+                    
+                }
             }
             &__right{
                 margin-top: auto;
@@ -240,11 +253,11 @@ header {
                 margin-right: 5%;
             }
         }
-    >h1{
-        @include margins(10px);
-        font-weight: 700;
-        font-size: 1.2rem;
-    }
+        >h1{
+            @include margins(10px);
+            font-weight: 700;
+            font-size: 1.2rem;
+        }        
     &__heart{
         text-align  : right;
     }

@@ -29,6 +29,11 @@ time, mark, audio, video {
           margin-inline-end: 0;
 }
 
+a {
+  text-decoration: none;
+  color: black;
+}
+
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
@@ -307,6 +312,11 @@ header h1 {
 .wrapper__restaurants__text__left {
   width: 65%;
   margin-left: 5%;
+}
+
+.wrapper__restaurants__text__left h1 {
+  font-weight: 700;
+  font-size: 1.2rem;
 }
 
 .wrapper__restaurants__text__right {
