@@ -1,0 +1,129 @@
+/*
+pages/ contient les blocs de code qui ne s’appliquent qu’à une seule page. 
+Vous utilisez des boutons dans tout votre site, en revanche votre page
+d’accueil comporte une section Citation et une grille de projets 
+qui ne sont employés nulle part ailleurs. En d’autres termes, pages/ 
+contient des règles spécifiques à une seule page qui 
+ne seront pas réutilisées ailleurs ;
+*/
+
+.wrapper{
+    width: 100%;
+    background-color: $color6;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column; 
+
+    &__intro{
+        width: 100%;
+        text-align: center;
+        display: flex;
+        flex-direction: column; 
+        align-items: center;
+        justify-content: center;
+        padding-bottom: 20px;
+        &__p1{
+            @include btn--loca;         
+            i {
+                margin-right: 10px;
+            }
+        }
+
+        &__p2{
+            padding-top: 20px;
+            @include margins(20px);
+            font-weight: 700;
+            font-size: 1.2rem;
+
+        }
+        &__p3 {
+            @include margins(20px);
+        }
+        &__p4 {
+            @include margins(20px);
+            @include btn--violet;
+    }
+}
+
+    &__hiw {
+        text-align: left;
+        padding-top: 10px;
+        padding-bottom: 30px;
+        width: 100%;
+        background-color: white;
+        >h2 {
+            @include margins(20px);
+            font-weight: 700;
+            font-size: 1.2rem;
+        }
+        ol {
+            margin-left: 5%;
+            width: 95%;
+            text-align  : left;
+            i {
+                margin-right: 15px;
+                margin-left: 20px;
+            }
+        li {
+            @include margins(10px);
+            @include btn--gris;
+            i {
+                color: $color7;
+            }
+        }
+    }
+}
+
+
+    &__restaurants {
+        width: 100%;
+        display:flex;
+        flex-direction: column;
+        text-align  : left;
+        >h2 {
+            @include margins(10px);
+            font-weight: 700;
+            font-size: 1.2rem;}
+
+        article {
+            @include margins(10px);
+            background-color: #f6f6f6;
+        } 
+        &__photo {  
+            border-radius:15px 15px 0px 0px;
+            width: 100%;
+        }
+        &__text {
+            background-color: white;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-content: center;
+            border-radius:0px 0px 15px 15px; 
+            &__left {
+                width: 65%;
+                margin-left: 5%;
+                h3{
+                    font-weight: 700;
+                    font-size: 1.2rem;                  
+                }
+                h4{
+                    font-weight: 700;
+                    font-size: 1.2rem; 
+                }
+            }
+            &__right{
+                margin-top: auto;
+                margin-bottom:auto;
+                width: 25%;
+                text-align: right;
+                margin-right: 5%;
+            }
+        }
+    &__heart{
+        text-align  : right;
+    }
+}
+}

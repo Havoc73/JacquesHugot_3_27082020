@@ -1,0 +1,45 @@
+/*
+components/ est utilisé pour ranger les blocs BEM qui sont plus
+indépendants, comme les boutons.
+
+Alors que les layouts peuvent utiliser d’autres composants pour 
+générer leurs contenus, les composants, eux, sont plus élémentaires. 
+Par exemple, un formulaire doit être considéré comme un layout : 
+la mise en page est une fonction vitale du bloc et il utilise 
+d’autres blocs pour fonctionner,  comme des boutons. En revanche,
+le bouton lui-même est un composant car il n’a besoin d’aucun autre 
+composant pour remplir sa fonction ;
+*/
+
+@mixin btn--violet {
+    background: linear-gradient($color2,$color1);
+    color: $color0;
+    width: 60%;
+    height: 16px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-radius: 23px 23px 23px 23px;
+    box-shadow: 0px 3px 3px $color7;
+  }
+
+  @mixin btn--gris {
+    background-color:$color6;
+    color:$color8;
+    height: 16px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-radius: 18px 18px 18px 18px;
+    box-shadow: 0px 4px 4px $color5;
+  }
+  @mixin btn--loca {
+    background-color:$color5;
+    color:$color8;
+    height: 16px;
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 0.9rem;
+    font-weight: 599;
+}
+
+
