@@ -10,6 +10,7 @@ d’autres blocs pour fonctionner,  comme des boutons. En revanche,
 le bouton lui-même est un composant car il n’a besoin d’aucun autre 
 composant pour remplir sa fonction ;
 */
+@import '../02_Base/Base.scss';
 
 @mixin btn--violet {
     background: linear-gradient($color_2,$color_1);
@@ -23,16 +24,16 @@ composant pour remplir sa fonction ;
   }
 
   @mixin btn--gris {
-    background-color:$BackGround_secondary;
+    background-color:lighten($BackGround_secondary, 20%);
     color:$text;
     height: 16px;
     padding-top: 20px;
     padding-bottom: 20px;
     border-radius: 18px 18px 18px 18px;
-    @include btn-shadow($BackGround_secondary, 4px);
+    @include btn-shadow(lighten($BackGround_secondary, 15%), 4px);
   }
   @mixin btn--loca {
-    background-color:$BackGround_secondary;
+    background-color:lighten($BackGround_secondary, 15%);
     color:$text;
     height: 16px;
     width: 100%;
@@ -40,6 +41,7 @@ composant pour remplir sa fonction ;
     padding-bottom: 10px;
     font-size: 0.9rem;
     font-weight: 599;
+    box-shadow:inset 0 2px 3px $BackGround_secondary;
 }
 
 

@@ -3,29 +3,24 @@ layouts/ est le dossier où vous mettez vos blocs BEM qui contiennent
 ce qui est réutilisable, par exemple un header pour les mises en page
 de grande taille ou un footer ;
 */
+@import '../03_Components/Components.scss';
 
 html{
     width: 100%;
-    font-family: $text;
+    font-family:$text;
     text-align  : center;
 }
 
 #main_wrapper {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    @include flexbox();
 }
 header {
-    align-items: center;
-    justify-content: center;
-    display: flex;
-    flex-direction: column;
-
+    @include flexbox();
     h1 {
         @include margins(10px);
         color:black;
         font-family: $logo;
-        background-color: $color0;
+        background-color:$BackGround_primary;
         font-size: 3rem;
     }
 }
@@ -33,18 +28,18 @@ header {
     
 footer{
     width: 100%;
-    background-color: $color4;
+    background-color: $BackGround_footer;
     color: white;
-    align-items: start;
-    justify-content:start;
-    display: flex;
-    flex-direction: column; 
+    @include flexbox(column,start,start);
     text-align: left;   
-    >h3 {
-        @include margins (5px);
-        font-family: $logo;
+    >h1 {
+        @include margins(15px);
+        font-family:$logo;
     }
     >h2 {
         @include margins(5px);
+        i{
+            margin-right: 12px;
+        }
     }
 }

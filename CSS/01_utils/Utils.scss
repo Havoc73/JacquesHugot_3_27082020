@@ -12,27 +12,27 @@ $color_2 : #FF79DA; /*  */
 $color_3 : #99E2D0; /*  */
 $BackGround_footer : #353535; /*pied de page*/
 $BackGround_secondary :#bababa; /*fond localisation*/
-$text: black;
+$text-cl_1:black;
 
-@function lightness-shift($colour){
-  @if ( lightness($colour) < 25% ) {
-    @return lighten($colour, 10%);
+@function lightness-shift($color){
+  @if ( lightness($color) < 25% ) {
+    @return lighten($color, 20%);
 }
   @else {
-    @return darken($colour, 10%);
+    @return darken($color, 20%);
 }
   }
 
 /* Shadows */
-@mixin btn-shadow($colour: lightness-shift($colour-primary), $size: $heading-shadow-size) {
-  box-shadow: 0px $size $size $color;
+@mixin btn-shadow($color: lightness-shift($color), $size: $size) {
+  box-shadow: 0px $size $size lightness-shift($color);
 }
 
 
 
 /* Fonts */
-$logo :shrikhandregular; /* font squirrel */
-$text :Roboto; /* google fonts */
+$logo:shrikhandregular; /* font squirrel */
+$text:Roboto; /* google fonts */
 
 
 
@@ -47,5 +47,12 @@ $text :Roboto; /* google fonts */
     margin-right:$width;
   }
 
+  @mixin flexbox($direction:column,$primary-axe:center,$secondary-axe:center,$wrap:wrap){
+    display: flex;
+    flex-direction:$direction; 
+    justify-content: $primary-axe;
+    align-items: $secondary-axe;
+    flex-wrap:$wrap
+  }
 
 /*  */

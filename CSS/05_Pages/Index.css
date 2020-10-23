@@ -1,0 +1,387 @@
+@charset "UTF-8";
+/*
+pages/ contient les blocs de code qui ne s’appliquent qu’à une seule page. 
+Vous utilisez des boutons dans tout votre site, en revanche votre page
+d’accueil comporte une section Citation et une grille de projets 
+qui ne sont employés nulle part ailleurs. En d’autres termes, pages/ 
+contient des règles spécifiques à une seule page qui 
+ne seront pas réutilisées ailleurs ;
+*/
+/*
+layouts/ est le dossier où vous mettez vos blocs BEM qui contiennent 
+ce qui est réutilisable, par exemple un header pour les mises en page
+de grande taille ou un footer ;
+*/
+/*
+components/ est utilisé pour ranger les blocs BEM qui sont plus
+indépendants, comme les boutons.
+
+Alors que les layouts peuvent utiliser d’autres composants pour 
+générer leurs contenus, les composants, eux, sont plus élémentaires. 
+Par exemple, un formulaire doit être considéré comme un layout : 
+la mise en page est une fonction vitale du bloc et il utilise 
+d’autres blocs pour fonctionner,  comme des boutons. En revanche,
+le bouton lui-même est un composant car il n’a besoin d’aucun autre 
+composant pour remplir sa fonction ;
+*/
+/* 
+le directory base/ contient les fichiers qui définissent
+les fondations de votre site, par exemple la police de caractères 
+et les normes que vous voulez appliquer sur tout votre site, telles 
+que le box-sizing ;
+*/
+/*
+dans utils/, vous rangez vos variables, fonctions, mixins 
+et les  %placeholders pour les extensions (si vous en utilisez) ;
+*/
+/* Variables */
+/* colors */
+/* header */
+/*  */
+/*  */
+/*  */
+/*pied de page*/
+/*fond localisation*/
+/* Shadows */
+/* Fonts */
+/* font squirrel */
+/* google fonts */
+/* mixins */
+/*  */
+/* reset css */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  text-decoration: none;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  background: inherit; }
+
+a {
+  text-decoration: none;
+  color: black; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* fin reset css */
+/* Fonts */
+@font-face {
+  font-family: 'shrikhandregular';
+  src: url("shrikhand-regular-webfont.eot");
+  src: url("Fonts/shrikhand-regular-webfont.eot?#iefix") format("embedded-opentype"), url("Font/shrikhand-regular-webfont.woff") format("woff"), url("Font/shrikhand-regular-webfont.woff2") format("woff"), url("Fonts/shrikhand-regular-webfont.ttf") format("truetype"), url("Fonts/shrikhand-regular-webfont.svg#shrikhandregular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+html {
+  width: 100%;
+  font-family: Roboto;
+  text-align: center; }
+
+#main_wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+  header h1 {
+    width: 90%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 5%;
+    margin-right: 5%;
+    color: black;
+    font-family: shrikhandregular;
+    background-color: white;
+    font-size: 3rem; }
+
+footer {
+  width: 100%;
+  background-color: #353535;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  text-align: left; }
+  footer > h1 {
+    width: 90%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left: 5%;
+    margin-right: 5%;
+    font-family: shrikhandregular; }
+  footer > h2 {
+    width: 90%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 5%;
+    margin-right: 5%; }
+    footer > h2 i {
+      margin-right: 12px; }
+
+.wrapper {
+  width: 100%;
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+  .wrapper__intro {
+    width: 100%;
+    text-align: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    padding-bottom: 20px; }
+    .wrapper__intro__p1 {
+      background-color: #e0e0e0;
+      color: Roboto;
+      height: 16px;
+      width: 100%;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      font-size: 0.9rem;
+      font-weight: 599;
+      -webkit-box-shadow: inset 0 2px 3px #bababa;
+              box-shadow: inset 0 2px 3px #bababa; }
+      .wrapper__intro__p1 i {
+        margin-right: 10px; }
+    .wrapper__intro__p2 {
+      padding-top: 20px;
+      width: 90%;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      margin-left: 5%;
+      margin-right: 5%;
+      font-weight: 700;
+      font-size: 1.2rem; }
+    .wrapper__intro__p3 {
+      width: 90%;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      margin-left: 5%;
+      margin-right: 5%; }
+    .wrapper__intro__p4 {
+      width: 90%;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      margin-left: 5%;
+      margin-right: 5%;
+      background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
+      background: linear-gradient(#FF79DA, #9356DC);
+      color: white;
+      width: 60%;
+      height: 16px;
+      padding-top: 15px;
+      padding-bottom: 15px;
+      border-radius: 23px 23px 23px 23px;
+      -webkit-box-shadow: 0px 3px 3px #6023a9;
+              box-shadow: 0px 3px 3px #6023a9; }
+  .wrapper__hiw {
+    text-align: left;
+    padding-top: 10px;
+    padding-bottom: 30px;
+    width: 100%;
+    background-color: white; }
+    .wrapper__hiw > h2 {
+      width: 90%;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      margin-left: 5%;
+      margin-right: 5%;
+      font-weight: 700;
+      font-size: 1.2rem; }
+    .wrapper__hiw ol {
+      margin-left: 5%;
+      width: 95%;
+      text-align: left; }
+      .wrapper__hiw ol i {
+        margin-right: 15px;
+        margin-left: 20px; }
+      .wrapper__hiw ol li {
+        width: 90%;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        margin-left: 5%;
+        margin-right: 5%;
+        background-color: #ededed;
+        color: Roboto;
+        height: 16px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        border-radius: 18px 18px 18px 18px;
+        -webkit-box-shadow: 0px 4px 4px #adadad;
+                box-shadow: 0px 4px 4px #adadad; }
+        .wrapper__hiw ol li i {
+          color: black; }
+  .wrapper__restaurants {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    text-align: left;
+    background-color: #ededed;
+    padding-top: 20px; }
+    .wrapper__restaurants > h2 {
+      width: 90%;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      margin-left: 5%;
+      margin-right: 5%;
+      font-weight: 700;
+      font-size: 1.2rem; }
+    .wrapper__restaurants article {
+      width: 90%;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      margin-left: 5%;
+      margin-right: 5%; }
+    .wrapper__restaurants__photo {
+      border-radius: 15px 15px 0px 0px;
+      width: 100%; }
+    .wrapper__restaurants__text {
+      background-color: white;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+              flex-direction: row;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+      border-radius: 0px 0px 15px 15px;
+      -webkit-box-shadow: 0 -4px white;
+              box-shadow: 0 -4px white; }
+      .wrapper__restaurants__text__left {
+        width: 65%;
+        margin-left: 5%; }
+        .wrapper__restaurants__text__left h3 {
+          font-weight: 700;
+          font-size: 1.2rem; }
+        .wrapper__restaurants__text__left h4 {
+          font-weight: 700;
+          font-size: 1.2rem; }
+      .wrapper__restaurants__text__right {
+        margin-top: auto;
+        margin-bottom: auto;
+        width: 25%;
+        text-align: right;
+        margin-right: 5%; }
+    .wrapper__restaurants__heart {
+      text-align: right; }
+/*# sourceMappingURL=Index.css.map */
