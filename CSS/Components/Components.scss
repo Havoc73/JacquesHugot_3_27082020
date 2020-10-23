@@ -12,28 +12,28 @@ composant pour remplir sa fonction ;
 */
 
 @mixin btn--violet {
-    background: linear-gradient($color2,$color1);
-    color: $color0;
+    background: linear-gradient($color_2,$color_1);
+    color: $BackGround_primary;
     width: 60%;
     height: 16px;
     padding-top: 15px;
     padding-bottom: 15px;
     border-radius: 23px 23px 23px 23px;
-    @include shadow($color_1 , 3px);
+    @include btn-shadow($color_1 , 3px);
   }
 
   @mixin btn--gris {
-    background-color:$color6;
-    color:$color8;
+    background-color:$BackGround_secondary;
+    color:$text;
     height: 16px;
     padding-top: 20px;
     padding-bottom: 20px;
     border-radius: 18px 18px 18px 18px;
-    box-shadow: 0px 4px 4px $color5;
+    @include btn-shadow($BackGround_secondary, 4px);
   }
   @mixin btn--loca {
-    background-color:$color5;
-    color:$color8;
+    background-color:$BackGround_secondary;
+    color:$text;
     height: 16px;
     width: 100%;
     padding-top: 10px;

@@ -14,18 +14,21 @@ $BackGround_footer : #353535; /*pied de page*/
 $BackGround_secondary :#bababa; /*fond localisation*/
 $text: black;
 
-/* Shadows */
+@function lightness-shift($colour){
+  @if ( lightness($colour) < 25% ) {
+    @return lighten($colour, 10%);
+}
+  @else {
+    @return darken($colour, 10%);
+}
+  }
 
-@mixin shadow($color, $size){
-    $light: lightness($color);
-    @if($light<25%){
-        $colour:lighten($colour, 10%);
+/* Shadows */
+@mixin btn-shadow($colour: lightness-shift($colour-primary), $size: $heading-shadow-size) {
+  box-shadow: 0px $size $size $color;
 }
-    @else:
-        $colour: darken($colour, 10%);
-  box-shadow: 0px  $size $size $colour;
-    }
-}
+
+
 
 /* Fonts */
 $logo :shrikhandregular; /* font squirrel */
