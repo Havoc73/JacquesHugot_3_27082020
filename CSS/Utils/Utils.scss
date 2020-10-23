@@ -6,19 +6,33 @@ et les  %placeholders pour les extensions (si vous en utilisez) ;
 /* Variables */
 
 /* colors */
-$color0 :white; /* header */
-$color1 : #9356DC; /*  */
-$color2 : #FF79DA; /*  */
-$color3 : #99E2D0; /*  */
-$color4 : #353535; /*pied de page*/
-$color5 :#eaeaea; /*fond localisation*/
-$color6 :#f6f6f6; /*fond wrapper*/
-$color7 : #bababa; /*icons gris*/
-$color8: black;
+$BackGround_primary :white; /* header */
+$color_1 : #9356DC; /*  */
+$color_2 : #FF79DA; /*  */
+$color_3 : #99E2D0; /*  */
+$BackGround_footer : #353535; /*pied de page*/
+$BackGround_secondary :#bababa; /*fond localisation*/
+$text: black;
+
+/* Shadows */
+
+@mixin shadow($color, $size){
+    $light: lightness($color);
+    @if($light<25%){
+        $colour:lighten($colour, 10%);
+}
+    @else:
+        $colour: darken($colour, 10%);
+  box-shadow: 0px  $size $size $colour;
+    }
+}
 
 /* Fonts */
 $logo :shrikhandregular; /* font squirrel */
 $text :Roboto; /* google fonts */
+
+
+
 
 
 /* mixins */
