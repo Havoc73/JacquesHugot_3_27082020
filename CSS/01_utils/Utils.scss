@@ -1,0 +1,58 @@
+/*
+dans utils/, vous rangez vos variables, fonctions, mixins 
+et les  %placeholders pour les extensions (si vous en utilisez) ;
+*/
+
+/* Variables */
+
+/* colors */
+$BackGround_primary :white; /* header */
+$color_1 : #9356DC; /*  */
+$color_2 : #FF79DA; /*  */
+$color_3 : #99E2D0; /*  */
+$BackGround_footer : #353535; /*pied de page*/
+$BackGround_secondary :#bababa; /*fond localisation*/
+$text-cl_1:black;
+
+@function lightness-shift($color){
+  @if ( lightness($color) < 25% ) {
+    @return lighten($color, 20%);
+}
+  @else {
+    @return darken($color, 20%);
+}
+  }
+
+/* Shadows */
+@mixin btn-shadow($color: lightness-shift($color), $size: $size) {
+  box-shadow: 0px $size $size lightness-shift($color);
+}
+
+
+
+/* Fonts */
+$logo:shrikhandregular; /* font squirrel */
+$text:Roboto; /* google fonts */
+
+
+
+
+
+/* mixins */
+  @mixin margins ($height: 0px ,$width: 5%, $main-width:90%) {
+    width: $main-width;
+    margin-top: $height;
+    margin-bottom: $height;
+    margin-left:$width;
+    margin-right:$width;
+  }
+
+  @mixin flexbox($direction:column,$primary-axe:center,$secondary-axe:center,$wrap:wrap){
+    display: flex;
+    flex-direction:$direction; 
+    justify-content: $primary-axe;
+    align-items: $secondary-axe;
+    flex-wrap:$wrap
+  }
+
+/*  */

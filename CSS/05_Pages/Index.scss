@@ -6,22 +6,18 @@ qui ne sont employés nulle part ailleurs. En d’autres termes, pages/
 contient des règles spécifiques à une seule page qui 
 ne seront pas réutilisées ailleurs ;
 */
+@import '../04_Layout/Layout.scss';
+
 
 .wrapper{
     width: 100%;
-    background-color: $color6;
-    align-items: center;
-    justify-content: center;
-    display: flex;
-    flex-direction: column; 
+    background-color:$BackGround_primary;
+    @include flexbox; 
 
     &__intro{
         width: 100%;
         text-align: center;
-        display: flex;
-        flex-direction: column; 
-        align-items: center;
-        justify-content: center;
+        @include flexbox;
         padding-bottom: 20px;
         &__p1{
             @include btn--loca;         
@@ -69,7 +65,7 @@ ne seront pas réutilisées ailleurs ;
             @include margins(10px);
             @include btn--gris;
             i {
-                color: $color7;
+                color: $text-cl_1;
             }
         }
     }
@@ -78,9 +74,10 @@ ne seront pas réutilisées ailleurs ;
 
     &__restaurants {
         width: 100%;
-        display:flex;
-        flex-direction: column;
+        @include flexbox;
         text-align  : left;
+        background-color: lighten($BackGround_secondary, 20%);
+        padding-top: 20px;
         >h2 {
             @include margins(10px);
             font-weight: 700;
@@ -88,7 +85,6 @@ ne seront pas réutilisées ailleurs ;
 
         article {
             @include margins(10px);
-            background-color: #f6f6f6;
         } 
         &__photo {  
             border-radius:15px 15px 0px 0px;
@@ -96,12 +92,9 @@ ne seront pas réutilisées ailleurs ;
         }
         &__text {
             background-color: white;
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            align-content: center;
+            @include flexbox(row,center,center,wrap);
             border-radius:0px 0px 15px 15px; 
+            box-shadow: 0 -4px $BackGround_primary;
             &__left {
                 width: 65%;
                 margin-left: 5%;
@@ -123,7 +116,7 @@ ne seront pas réutilisées ailleurs ;
             }
         }
     &__heart{
-        text-align  : right;
+        text-align :right;
     }
 }
 }
