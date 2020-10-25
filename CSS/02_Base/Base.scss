@@ -5,7 +5,6 @@ et les normes que vous voulez appliquer sur tout votre site, telles
 que le box-sizing ;
 */
 @import '../01_Utils/Utils.scss' ;
-
 /* reset css */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -29,14 +28,11 @@ time, mark, audio, video {
 	vertical-align: baseline;
     background: inherit;
 }
-
 a {
     text-decoration: none;
     color: black;
 }
-
 /* HTML5 display-role reset for older browsers */
-
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
 	display: block;
@@ -59,11 +55,20 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
-
 /* fin reset css */
 
+/* parametres de base */
+html{
+    width: 100%;
+    font-family:$text;
+    font-size: 16px;
+    font-weight:400;
+    font-style: normal;
+    text-align: left;
+    color:$text-cl_1;
+    background-color:$BackGround_primary;
+}
 /* Fonts */
-
 @font-face {
     font-family: 'shrikhandregular';
     src: url('shrikhand-regular-webfont.eot');
