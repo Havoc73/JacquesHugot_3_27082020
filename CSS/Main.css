@@ -37,11 +37,11 @@ et les  %placeholders pour les extensions (si vous en utilisez) ;
 /* Variables */
 /* colors */
 /* header */
-/*  */
-/*  */
-/*  */
-/*pied de page*/
 /*fond localisation*/
+/*pied de page*/
+/*  */
+/*  */
+/*  */
 /* Shadows */
 /* Fonts */
 /* font squirrel */
@@ -99,6 +99,17 @@ table {
   border-spacing: 0; }
 
 /* fin reset css */
+/* parametres de base */
+html {
+  width: 100%;
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: 400;
+  font-style: normal;
+  text-align: left;
+  color: black;
+  background-color: white; }
+
 /* Fonts */
 @font-face {
   font-family: 'shrikhandregular';
@@ -107,12 +118,8 @@ table {
   font-weight: normal;
   font-style: normal; }
 
-html {
-  width: 100%;
-  font-family: Roboto;
-  text-align: center; }
-
 #main_wrapper {
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -130,6 +137,7 @@ html {
       flex-wrap: wrap; }
 
 header {
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -144,22 +152,30 @@ header {
       -ms-flex-align: center;
           align-items: center;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap; }
+      flex-wrap: wrap;
+  width: 100%;
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: 400;
+  font-style: normal;
+  text-align: left;
+  color: black;
+  background-color: white; }
   header h1 {
+    font-family: shrikhandregular;
+    font-size: 48px;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+    color: black;
     width: 90%;
     margin-top: 10px;
     margin-bottom: 10px;
     margin-left: 5%;
-    margin-right: 5%;
-    color: black;
-    font-family: shrikhandregular;
-    background-color: white;
-    font-size: 3rem; }
+    margin-right: 5%; }
 
 footer {
   width: 100%;
-  background-color: #353535;
-  color: white;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -175,14 +191,26 @@ footer {
           align-items: start;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  text-align: left; }
+  width: 100%;
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: 400;
+  font-style: normal;
+  text-align: left;
+  color: white;
+  background-color: #353535; }
   footer > h1 {
+    font-family: shrikhandregular;
+    font-size: 16px;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+    color: white;
     width: 90%;
     margin-top: 15px;
     margin-bottom: 15px;
     margin-left: 5%;
-    margin-right: 5%;
-    font-family: shrikhandregular; }
+    margin-right: 5%; }
   footer > h2 {
     width: 90%;
     margin-top: 5px;
@@ -194,7 +222,6 @@ footer {
 
 .wrapper {
   width: 100%;
-  background-color: white;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -209,10 +236,17 @@ footer {
       -ms-flex-align: center;
           align-items: center;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap; }
+      flex-wrap: wrap;
+  width: 100%;
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: 400;
+  font-style: normal;
+  text-align: left;
+  color: black;
+  background-color: white; }
   .wrapper__intro {
     width: 100%;
-    text-align: center;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -228,9 +262,10 @@ footer {
             align-items: center;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+    text-align: center;
     padding-bottom: 20px; }
     .wrapper__intro__p1 {
-      background-color: #e0e0e0;
+      background-color: #d9d9d9;
       color: Roboto;
       height: 16px;
       width: 100%;
@@ -238,8 +273,8 @@ footer {
       padding-bottom: 10px;
       font-size: 0.9rem;
       font-weight: 599;
-      -webkit-box-shadow: inset 0 2px 3px #bababa;
-              box-shadow: inset 0 2px 3px #bababa; }
+      -webkit-box-shadow: inset 0 2px 3px #b3b3b3;
+              box-shadow: inset 0 2px 3px #b3b3b3; }
       .wrapper__intro__p1 i {
         margin-right: 10px; }
     .wrapper__intro__p2 {
@@ -274,11 +309,8 @@ footer {
       -webkit-box-shadow: 0px 3px 3px #6023a9;
               box-shadow: 0px 3px 3px #6023a9; }
   .wrapper__hiw {
-    text-align: left;
     padding-top: 10px;
-    padding-bottom: 30px;
-    width: 100%;
-    background-color: white; }
+    padding-bottom: 30px; }
     .wrapper__hiw > h2 {
       width: 90%;
       margin-top: 20px;
@@ -288,9 +320,11 @@ footer {
       font-weight: 700;
       font-size: 1.2rem; }
     .wrapper__hiw ol {
+      width: 90%;
+      margin-top: 0px;
+      margin-bottom: 0px;
       margin-left: 5%;
-      width: 95%;
-      text-align: left; }
+      margin-right: 5%; }
       .wrapper__hiw ol i {
         margin-right: 15px;
         margin-left: 20px; }
@@ -300,16 +334,24 @@ footer {
         margin-bottom: 10px;
         margin-left: 5%;
         margin-right: 5%;
-        background-color: #ededed;
+        background-color: #e6e6e6;
         color: Roboto;
         height: 16px;
         padding-top: 20px;
         padding-bottom: 20px;
         border-radius: 18px 18px 18px 18px;
-        -webkit-box-shadow: 0px 4px 4px #adadad;
-                box-shadow: 0px 4px 4px #adadad; }
+        -webkit-box-shadow: 0px 4px 4px #a6a6a6;
+                box-shadow: 0px 4px 4px #a6a6a6; }
+        .wrapper__hiw ol li .pastille--violet {
+          position: relative;
+          left: -8px;
+          background-color: #9356DC;
+          border-radius: 50%;
+          padding-left: 4px;
+          padding-right: 4px;
+          color: white; }
         .wrapper__hiw ol li i {
-          color: black; }
+          color: #b3b3b3; }
   .wrapper__restaurants {
     width: 100%;
     display: -webkit-box;
@@ -327,8 +369,7 @@ footer {
             align-items: center;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    text-align: left;
-    background-color: #ededed;
+    background-color: #e6e6e6;
     padding-top: 20px; }
     .wrapper__restaurants > h2 {
       width: 90%;
@@ -338,50 +379,60 @@ footer {
       margin-right: 5%;
       font-weight: 700;
       font-size: 1.2rem; }
-    .wrapper__restaurants article {
-      width: 90%;
-      margin-top: 10px;
-      margin-bottom: 10px;
-      margin-left: 5%;
-      margin-right: 5%; }
-    .wrapper__restaurants__photo {
-      border-radius: 15px 15px 0px 0px;
-      width: 100%; }
-    .wrapper__restaurants__text {
-      background-color: white;
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-orient: horizontal;
-      -webkit-box-direction: normal;
-          -ms-flex-direction: row;
-              flex-direction: row;
-      -webkit-box-pack: center;
-          -ms-flex-pack: center;
-              justify-content: center;
-      -webkit-box-align: center;
-          -ms-flex-align: center;
-              align-items: center;
-      -ms-flex-wrap: wrap;
-          flex-wrap: wrap;
-      border-radius: 0px 0px 15px 15px;
-      -webkit-box-shadow: 0 -4px white;
-              box-shadow: 0 -4px white; }
-      .wrapper__restaurants__text__left {
-        width: 65%;
-        margin-left: 5%; }
-        .wrapper__restaurants__text__left h3 {
-          font-weight: 700;
-          font-size: 1.2rem; }
-        .wrapper__restaurants__text__left h4 {
-          font-weight: 700;
-          font-size: 1.2rem; }
-      .wrapper__restaurants__text__right {
-        margin-top: auto;
-        margin-bottom: auto;
-        width: 25%;
-        text-align: right;
+      .wrapper__restaurants > h2 article {
+        width: 90%;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        margin-left: 5%;
         margin-right: 5%; }
-    .wrapper__restaurants__heart {
-      text-align: right; }
+        .wrapper__restaurants > h2 article .btn--new {
+          position: relative;
+          left: 75%;
+          top: 50px;
+          background-color: #99E2D0;
+          color: #278870;
+          padding-left: 5%;
+          padding-right: 5%;
+          padding-top: 4px;
+          padding-bottom: 4px;
+          border-radius: 4px; }
+      .wrapper__restaurants > h2__photo {
+        border-radius: 15px 15px 0px 0px; }
+      .wrapper__restaurants > h2__text {
+        width: 100%;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+        border-radius: 0px 0px 15px 15px;
+        -webkit-box-shadow: 0 -4px white;
+                box-shadow: 0 -4px white; }
+        .wrapper__restaurants > h2__text__left {
+          width: 65%;
+          margin-left: 5%; }
+          .wrapper__restaurants > h2__text__left h3 {
+            font-weight: 700;
+            font-size: 1.2rem; }
+          .wrapper__restaurants > h2__text__left h4 {
+            font-weight: 400;
+            font-size: 1.2rem; }
+        .wrapper__restaurants > h2__text__right {
+          margin-top: auto;
+          margin-bottom: auto;
+          width: 25%;
+          text-align: right;
+          margin-right: 5%; }
+      .wrapper__restaurants > h2__heart {
+        text-align: right; }
 /*# sourceMappingURL=Main.css.map */

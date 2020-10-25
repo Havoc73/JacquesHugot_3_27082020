@@ -7,12 +7,15 @@ et les  %placeholders pour les extensions (si vous en utilisez) ;
 
 /* colors */
 $BackGround_primary :white; /* header */
+$BackGround_secondary :lighten(grey, 20%); /*fond localisation*/
+$BackGround_footer : #353535; /*pied de page*/
 $color_1 : #9356DC; /*  */
 $color_2 : #FF79DA; /*  */
 $color_3 : #99E2D0; /*  */
-$BackGround_footer : #353535; /*pied de page*/
-$BackGround_secondary :#bababa; /*fond localisation*/
 $text-cl_1:black;
+$text-cl_2:white;
+$text-cl_3:lighten(grey, 20%);
+$text-cl_4:darken($color_3, 40%);
 
 @function lightness-shift($color){
   @if ( lightness($color) < 25% ) {
@@ -34,9 +37,10 @@ $text-cl_1:black;
 $logo:shrikhandregular; /* font squirrel */
 $text:Roboto; /* google fonts */
 
-
-
-
+@mixin font_bold() {
+  font-weight: 700;
+  font-size: 1.2rem;
+}
 
 /* mixins */
   @mixin margins ($height: 0px ,$width: 5%, $main-width:90%) {
@@ -48,11 +52,11 @@ $text:Roboto; /* google fonts */
   }
 
   @mixin flexbox($direction:column,$primary-axe:center,$secondary-axe:center,$wrap:wrap){
+    width: 100%;
     display: flex;
     flex-direction:$direction; 
     justify-content: $primary-axe;
     align-items: $secondary-axe;
     flex-wrap:$wrap
-  }
-
+  }  
 /*  */
