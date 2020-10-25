@@ -4,37 +4,23 @@ ce qui est réutilisable, par exemple un header pour les mises en page
 de grande taille ou un footer ;
 */
 @import '../03_Components/Components.scss';
-
-html{
-    width: 100%;
-    font-family:$text;
-    text-align  : center;
-}
-
 #main_wrapper {
     @include flexbox();
 }
 header {
     @include flexbox();
+    @include block_header();
     h1 {
+        @include element_big_logo();
         @include margins(10px);
-        color:black;
-        font-family: $logo;
-        background-color:$BackGround_primary;
-        font-size: 3rem;
     }
-}
-
-    
+}  
 footer{
-    width: 100%;
-    background-color: $BackGround_footer;
-    color: white;
     @include flexbox(column,start,start);
-    text-align: left;   
+    @include block_footer(); 
     >h1 {
+        @include element_small_logo();
         @include margins(15px);
-        font-family:$logo;
     }
     >h2 {
         @include margins(5px);

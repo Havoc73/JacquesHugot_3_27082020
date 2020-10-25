@@ -10,14 +10,11 @@ ne seront pas réutilisées ailleurs ;
 
 
 .wrapper{
-    width: 100%;
-    background-color:$BackGround_primary;
-    @include flexbox; 
-
+    @include flexbox(); 
+    @include block_wrapper();
     &__intro{
-        width: 100%;
-        text-align: center;
         @include flexbox;
+        text-align: center;
         padding-bottom: 20px;
         &__p1{
             @include btn--loca;         
@@ -25,13 +22,10 @@ ne seront pas réutilisées ailleurs ;
                 margin-right: 10px;
             }
         }
-
         &__p2{
             padding-top: 20px;
             @include margins(20px);
-            font-weight: 700;
-            font-size: 1.2rem;
-
+            @include font_bold();
         }
         &__p3 {
             @include margins(20px);
@@ -41,22 +35,15 @@ ne seront pas réutilisées ailleurs ;
             @include btn--violet;
     }
 }
-
     &__hiw {
-        text-align: left;
         padding-top: 10px;
         padding-bottom: 30px;
-        width: 100%;
-        background-color: white;
         >h2 {
             @include margins(20px);
-            font-weight: 700;
-            font-size: 1.2rem;
+            @include font_bold();
         }
         ol {
-            margin-left: 5%;
-            width: 95%;
-            text-align  : left;
+            @include margins (0px);
             i {
                 margin-right: 15px;
                 margin-left: 20px;
@@ -64,34 +51,32 @@ ne seront pas réutilisées ailleurs ;
         li {
             @include margins(10px);
             @include btn--gris;
+            .pastille--violet {
+                @include pastille--violet();
+            }
             i {
-                color: $text-cl_1;
+                color: $BackGround_secondary;
             }
         }
     }
 }
-
-
     &__restaurants {
-        width: 100%;
         @include flexbox;
-        text-align  : left;
         background-color: lighten($BackGround_secondary, 20%);
         padding-top: 20px;
         >h2 {
             @include margins(10px);
-            font-weight: 700;
-            font-size: 1.2rem;}
-
+            @include font_bold();
         article {
             @include margins(10px);
+            .btn--new {
+                @include btn--new();
+            }
         } 
         &__photo {  
             border-radius:15px 15px 0px 0px;
-            width: 100%;
         }
         &__text {
-            background-color: white;
             @include flexbox(row,center,center,wrap);
             border-radius:0px 0px 15px 15px; 
             box-shadow: 0 -4px $BackGround_primary;
@@ -99,11 +84,10 @@ ne seront pas réutilisées ailleurs ;
                 width: 65%;
                 margin-left: 5%;
                 h3{
-                    font-weight: 700;
-                    font-size: 1.2rem;                  
+                    @include font_bold();                  
                 }
                 h4{
-                    font-weight: 700;
+                    font-weight: 400;
                     font-size: 1.2rem; 
                 }
             }
@@ -118,5 +102,6 @@ ne seront pas réutilisées ailleurs ;
     &__heart{
         text-align :right;
     }
+}
 }
 }
