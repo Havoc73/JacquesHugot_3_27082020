@@ -13,7 +13,6 @@ composant pour remplir sa fonction ;
 @import '../02_Base/Base.scss';
 
 @mixin block_header() {
-  width: 100%;
   font-family: $text;
   font-size: 16px;
   font-weight:400;
@@ -23,7 +22,6 @@ composant pour remplir sa fonction ;
   background-color:$BackGround_primary;
 }
 @mixin block_footer () {
-  width: 100%;
   font-family: $text;
   font-size: 16px;
   font-weight:400;
@@ -33,7 +31,6 @@ composant pour remplir sa fonction ;
   background-color:$BackGround_footer;
 }
 @mixin block_wrapper() {
-  width: 100%;
   font-family: $text;
   font-size: 16px;
   font-weight:400;
@@ -41,6 +38,15 @@ composant pour remplir sa fonction ;
   text-align: left;
   color:$text-cl_1;
   background-color:$BackGround_primary;
+}
+@mixin block_restaurants() {
+  font-family: $text;
+  font-size: 16px;
+  font-weight:400;
+  font-style: normal;
+  text-align: left;
+  color:$text-cl_1;
+  background-color:$BackGround_secondary;
 }
 @mixin element_big_logo () {
   font-family: $logo;
@@ -50,12 +56,21 @@ composant pour remplir sa fonction ;
   text-align: center;
   color:$text-cl_1;
 }
+@mixin element_photo() {
+  width: 100%;
+  border-radius:15px 15px 0px 0px;  
+}
+@mixin element_photo_text() {
+  background-color:$BackGround_primary;
+  border-radius:0px 0px 15px 15px; 
+  box-shadow: 0 -4px $BackGround_primary; 
+}
 @mixin element_small_logo () {
   font-family: $logo;
   font-size: 16px;
   font-weight:400;
   font-style: normal;
-  text-align: center;
+  text-align: left;
   color:$text-cl_2;
 }
 @mixin btn--violet {
@@ -69,16 +84,17 @@ border-radius: 23px 23px 23px 23px;
 @include btn-shadow($color_1 , 3px);
   }
 @mixin btn--gris {
-  background-color:lighten($BackGround_secondary, 20%);
+  background-color:$BackGround_secondary;
   color:$text;
   height: 16px;
   padding-top: 20px;
   padding-bottom: 20px;
   border-radius: 18px 18px 18px 18px;
-  @include btn-shadow(lighten($BackGround_secondary, 15%), 4px);
+  @include btn-shadow($BackGround_secondary, 4px);
   }
 @mixin btn--loca {
-  background-color:lighten($BackGround_secondary, 15%);
+  width: 100%;
+  background-color:$BackGround_secondary;
   color:$text;
   height: 16px;
   width: 100%;
@@ -86,18 +102,19 @@ border-radius: 23px 23px 23px 23px;
   padding-bottom: 10px;
   font-size: 0.9rem;
   font-weight: 599;
-  box-shadow:inset 0 2px 3px $BackGround_secondary;
+  box-shadow:inset 0 2px 3px darken($BackGround_secondary,20%);
 }
 @mixin btn--new {
+  width: 15%;
+  height: 35px;
+  display: block;
+  line-height: 35px;
+  text-align: center;
   position: relative;
   left: 75%;
   top: 50px;
   background-color: $color_3;
   color:$text-cl_4;
-  padding-left:5%;
-  padding-right:5%;
-  padding-top:4px;
-  padding-bottom:4px;
   border-radius:4px;
 }
 @mixin pastille--violet() {
@@ -107,5 +124,5 @@ border-radius: 23px 23px 23px 23px;
   border-radius: 50%;
   padding-left: 4px;
   padding-right: 4px;
-  color:$text-cl_2 ;  
+  color:$text-cl_2;  
 }

@@ -36,6 +36,7 @@ ne seront pas réutilisées ailleurs ;
     }
 }
     &__hiw {
+        @include flexbox();
         padding-top: 10px;
         padding-bottom: 30px;
         >h2 {
@@ -62,33 +63,29 @@ ne seront pas réutilisées ailleurs ;
 }
     &__restaurants {
         @include flexbox;
-        background-color: lighten($BackGround_secondary, 20%);
-        padding-top: 20px;
+        @include block_restaurants();
+        article {
+            @include margins(10px);
+        } 
         >h2 {
             @include margins(10px);
             @include font_bold();
-        article {
-            @include margins(10px);
-            .btn--new {
-                @include btn--new();
-            }
-        } 
+        }
         &__photo {  
-            border-radius:15px 15px 0px 0px;
+            @include element_photo();
         }
         &__text {
             @include flexbox(row,center,center,wrap);
-            border-radius:0px 0px 15px 15px; 
-            box-shadow: 0 -4px $BackGround_primary;
+            @include element_photo_text();
             &__left {
                 width: 65%;
                 margin-left: 5%;
-                h3{
+                h3 {
+                    @include margins(5px,0%,100%);
                     @include font_bold();                  
                 }
-                h4{
-                    font-weight: 400;
-                    font-size: 1.2rem; 
+                h4 {
+                    @include margins(5px,0%,100%);
                 }
             }
             &__right{
@@ -100,8 +97,8 @@ ne seront pas réutilisées ailleurs ;
             }
         }
     &__heart{
+        display: inline;
         text-align :right;
     }
-}
 }
 }

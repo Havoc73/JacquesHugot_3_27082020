@@ -4,6 +4,10 @@ ce qui est réutilisable, par exemple un header pour les mises en page
 de grande taille ou un footer ;
 */
 @import '../03_Components/Components.scss';
+.btn--new {
+    @include btn--new();
+}
+
 #main_wrapper {
     @include flexbox();
 }
