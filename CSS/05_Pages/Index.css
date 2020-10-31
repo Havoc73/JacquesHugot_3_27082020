@@ -118,6 +118,7 @@ html {
   font-weight: normal;
   font-style: normal; }
 
+<<<<<<< HEAD
 .btn--new {
   width: 15%;
   height: 35px;
@@ -131,6 +132,8 @@ html {
   color: #278870;
   border-radius: 4px; }
 
+=======
+>>>>>>> 7de80c475f6b79334ba3d2e074b4bb055a5e3cb9
 #main_wrapper {
   width: 100%;
   display: -webkit-box;
@@ -166,6 +169,10 @@ header {
           align-items: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+<<<<<<< HEAD
+=======
+  width: 100%;
+>>>>>>> 7de80c475f6b79334ba3d2e074b4bb055a5e3cb9
   font-family: Roboto;
   font-size: 16px;
   font-weight: 400;
@@ -203,6 +210,10 @@ footer {
           align-items: start;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+<<<<<<< HEAD
+=======
+  width: 100%;
+>>>>>>> 7de80c475f6b79334ba3d2e074b4bb055a5e3cb9
   font-family: Roboto;
   font-size: 16px;
   font-weight: 400;
@@ -215,7 +226,11 @@ footer {
     font-size: 16px;
     font-weight: 400;
     font-style: normal;
+<<<<<<< HEAD
     text-align: left;
+=======
+    text-align: center;
+>>>>>>> 7de80c475f6b79334ba3d2e074b4bb055a5e3cb9
     color: white;
     width: 90%;
     margin-top: 15px;
@@ -248,6 +263,10 @@ footer {
           align-items: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+<<<<<<< HEAD
+=======
+  width: 100%;
+>>>>>>> 7de80c475f6b79334ba3d2e074b4bb055a5e3cb9
   font-family: Roboto;
   font-size: 16px;
   font-weight: 400;
@@ -275,8 +294,12 @@ footer {
     text-align: center;
     padding-bottom: 20px; }
     .wrapper__intro__p1 {
+<<<<<<< HEAD
       width: 100%;
       background-color: #e6e6e6;
+=======
+      background-color: #d9d9d9;
+>>>>>>> 7de80c475f6b79334ba3d2e074b4bb055a5e3cb9
       color: Roboto;
       height: 16px;
       width: 100%;
@@ -320,6 +343,7 @@ footer {
       -webkit-box-shadow: 0px 3px 3px #6023a9;
               box-shadow: 0px 3px 3px #6023a9; }
   .wrapper__hiw {
+<<<<<<< HEAD
     width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -336,6 +360,8 @@ footer {
             align-items: center;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+=======
+>>>>>>> 7de80c475f6b79334ba3d2e074b4bb055a5e3cb9
     padding-top: 10px;
     padding-bottom: 30px; }
     .wrapper__hiw > h2 {
@@ -367,8 +393,13 @@ footer {
         padding-top: 20px;
         padding-bottom: 20px;
         border-radius: 18px 18px 18px 18px;
+<<<<<<< HEAD
         -webkit-box-shadow: 0px 4px 4px #b3b3b3;
                 box-shadow: 0px 4px 4px #b3b3b3; }
+=======
+        -webkit-box-shadow: 0px 4px 4px #a6a6a6;
+                box-shadow: 0px 4px 4px #a6a6a6; }
+>>>>>>> 7de80c475f6b79334ba3d2e074b4bb055a5e3cb9
         .wrapper__hiw ol li .pastille--violet {
           position: relative;
           left: -8px;
@@ -378,7 +409,11 @@ footer {
           padding-right: 4px;
           color: white; }
         .wrapper__hiw ol li i {
+<<<<<<< HEAD
           color: #e6e6e6; }
+=======
+          color: #b3b3b3; }
+>>>>>>> 7de80c475f6b79334ba3d2e074b4bb055a5e3cb9
   .wrapper__restaurants {
     width: 100%;
     display: -webkit-box;
@@ -396,6 +431,7 @@ footer {
             align-items: center;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+<<<<<<< HEAD
     font-family: Roboto;
     font-size: 16px;
     font-weight: 400;
@@ -404,10 +440,16 @@ footer {
     color: black;
     background-color: #e6e6e6; }
     .wrapper__restaurants article {
+=======
+    background-color: #e6e6e6;
+    padding-top: 20px; }
+    .wrapper__restaurants > h2 {
+>>>>>>> 7de80c475f6b79334ba3d2e074b4bb055a5e3cb9
       width: 90%;
       margin-top: 10px;
       margin-bottom: 10px;
       margin-left: 5%;
+<<<<<<< HEAD
       margin-right: 5%; }
     .wrapper__restaurants > h2 {
       width: 90%;
@@ -467,4 +509,65 @@ footer {
     .wrapper__restaurants__heart {
       display: inline;
       text-align: right; }
+=======
+      margin-right: 5%;
+      font-weight: 700;
+      font-size: 1.2rem; }
+      .wrapper__restaurants > h2 article {
+        width: 90%;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        margin-left: 5%;
+        margin-right: 5%; }
+        .wrapper__restaurants > h2 article .btn--new {
+          position: relative;
+          left: 75%;
+          top: 50px;
+          background-color: #99E2D0;
+          color: #278870;
+          padding-left: 5%;
+          padding-right: 5%;
+          padding-top: 4px;
+          padding-bottom: 4px;
+          border-radius: 4px; }
+      .wrapper__restaurants > h2__photo {
+        border-radius: 15px 15px 0px 0px; }
+      .wrapper__restaurants > h2__text {
+        width: 100%;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+        border-radius: 0px 0px 15px 15px;
+        -webkit-box-shadow: 0 -4px white;
+                box-shadow: 0 -4px white; }
+        .wrapper__restaurants > h2__text__left {
+          width: 65%;
+          margin-left: 5%; }
+          .wrapper__restaurants > h2__text__left h3 {
+            font-weight: 700;
+            font-size: 1.2rem; }
+          .wrapper__restaurants > h2__text__left h4 {
+            font-weight: 400;
+            font-size: 1.2rem; }
+        .wrapper__restaurants > h2__text__right {
+          margin-top: auto;
+          margin-bottom: auto;
+          width: 25%;
+          text-align: right;
+          margin-right: 5%; }
+      .wrapper__restaurants > h2__heart {
+        text-align: right; }
+>>>>>>> 7de80c475f6b79334ba3d2e074b4bb055a5e3cb9
 /*# sourceMappingURL=Index.css.map */

@@ -66,6 +66,9 @@ ne seront pas réutilisées ailleurs ;
         @include block_restaurants();
         article {
             @include margins(10px);
+            .btn--new {
+                @include btn--new();
+            }
         } 
         >h2 {
             @include margins(10px);

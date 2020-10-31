@@ -110,6 +110,7 @@ html {
   font-weight: normal;
   font-style: normal; }
 
+<<<<<<< HEAD
 .btn--new {
   width: 15%;
   height: 35px;
@@ -123,6 +124,8 @@ html {
   color: #278870;
   border-radius: 4px; }
 
+=======
+>>>>>>> 7de80c475f6b79334ba3d2e074b4bb055a5e3cb9
 #main_wrapper {
   width: 100%;
   display: -webkit-box;
@@ -158,6 +161,10 @@ header {
           align-items: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+<<<<<<< HEAD
+=======
+  width: 100%;
+>>>>>>> 7de80c475f6b79334ba3d2e074b4bb055a5e3cb9
   font-family: Roboto;
   font-size: 16px;
   font-weight: 400;
@@ -195,6 +202,10 @@ footer {
           align-items: start;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+<<<<<<< HEAD
+=======
+  width: 100%;
+>>>>>>> 7de80c475f6b79334ba3d2e074b4bb055a5e3cb9
   font-family: Roboto;
   font-size: 16px;
   font-weight: 400;
@@ -207,7 +218,11 @@ footer {
     font-size: 16px;
     font-weight: 400;
     font-style: normal;
+<<<<<<< HEAD
     text-align: left;
+=======
+    text-align: center;
+>>>>>>> 7de80c475f6b79334ba3d2e074b4bb055a5e3cb9
     color: white;
     width: 90%;
     margin-top: 15px;
